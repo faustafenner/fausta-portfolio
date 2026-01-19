@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 function ArrowIcon() {
   return (
@@ -20,25 +23,88 @@ function ArrowIcon() {
 }
 
 export default function Page() {
+  const [showEngineering, setShowEngineering] = useState(false);
+  const [showDesign, setShowDesign] = useState(false);
+
   return (
     <>
       <div className="fixed inset-0 pointer-events-none z-0 mt-8">
         <Image
           src="/fausta_logo.png"
           alt="Logo"
-          width={600}
-          height={600}
-          className="w-40 h-40 md:w-96 md:h-96 lg:w-[600px] lg:h-[600px]"
+          width={500}
+          height={500}
+          className="object-cover object-center"
+          // className="w-40 h-40 md:w-96 md:h-96 lg:w-[600px] lg:h-[600px]"
         />
       </div>
+
+      <div
+        className={`transition-opacity duration-500 ${showEngineering ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
+          <Image
+            src="/engineering_photo.jpg"
+            alt=""
+            width={600}
+            height={400}
+            className="object-cover object-center"
+          />
+        </div>
+        {/* 
+        <div className="fixed pointer-events-none z-0 top-52 right-[-150px] opacity-50">
+          <Image
+            src="/engineering_photo.jpg"
+            alt=""
+            width={600}
+            height={400}
+            className="object-cover object-center"
+          />
+        </div> */}
+      </div>
+
+      <div
+        className={`transition-opacity duration-500 ${showDesign ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
+          <Image
+            src="/design_photo.jpg"
+            alt=""
+            width={600}
+            height={400}
+            className="object-cover object-center"
+          />
+        </div>
+        {/* 
+        <div className="fixed pointer-events-none z-0 top-52 right-[-150px] opacity-50">
+          <Image
+            src="/design_photo.jpg"
+            alt=""
+            width={600}
+            height={400}
+            className="object-cover object-center"
+          />
+        </div> */}
+      </div>
+
       <section className="flex justify-center items-center my-64 relative z-10">
         <div className="flex gap-20 text-4xl">
-          <Link href="/design" className="flex items-center">
+          <Link
+            href="/design"
+            className="flex items-center hover:text-white"
+            onMouseEnter={() => setShowDesign(true)}
+            onMouseLeave={() => setShowDesign(false)}
+          >
             design
             <ArrowIcon />
           </Link>
 
-          <Link href="/engineering" className="flex items-center">
+          <Link
+            href="/engineering"
+            className="flex items-center hover:text-white"
+            onMouseEnter={() => setShowEngineering(true)}
+            onMouseLeave={() => setShowEngineering(false)}
+          >
             engineering
             <ArrowIcon />
           </Link>
