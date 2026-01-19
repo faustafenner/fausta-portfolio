@@ -88,7 +88,7 @@ export default function Page() {
       </div>
 
       <section className="flex justify-center items-center my-64 relative z-10">
-        <div className="flex gap-20 text-4xl">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-20 text-2xl md:text-4xl">
           <Link
             href="/design"
             className="flex items-center hover:text-white"
