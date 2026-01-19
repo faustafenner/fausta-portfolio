@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function ArrowIcon() {
   return (
@@ -20,18 +21,29 @@ function ArrowIcon() {
 
 export default function Page() {
   return (
-    <section className="flex justify-center items-center my-64">
-      <div className="flex gap-20 text-4xl">
-        <Link href="/design" className="flex items-center">
-          design
-          <ArrowIcon />
-        </Link>
-
-        <Link href="/engineering" className="flex items-center">
-          engineering
-          <ArrowIcon />
-        </Link>
+    <>
+      <div className="fixed inset-0 pointer-events-none z-0 mt-8">
+        <Image
+          src="/fausta_logo.png"
+          alt="Logo"
+          width={600}
+          height={600}
+          className="w-40 h-40 md:w-96 md:h-96 lg:w-[600px] lg:h-[600px]"
+        />
       </div>
-    </section>
+      <section className="flex justify-center items-center my-64 relative z-10">
+        <div className="flex gap-20 text-4xl">
+          <Link href="/design" className="flex items-center">
+            design
+            <ArrowIcon />
+          </Link>
+
+          <Link href="/engineering" className="flex items-center">
+            engineering
+            <ArrowIcon />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
