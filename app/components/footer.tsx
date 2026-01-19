@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-8">
+    <footer className="mt-8 mb-10">
       <div className="flex justify-end gap-4">
         <a
           href="/about"
