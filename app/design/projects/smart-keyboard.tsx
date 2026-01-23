@@ -51,10 +51,10 @@ export default function SmartKeyboard() {
             Programming
           </p>
           <p>
-            <strong>Tools:</strong> Figma, React, Python
+            <strong>Tools:</strong> Figma, React, HTML, CSS, Python
           </p>
         </div>
-        <p className="text-right"> Sept.-Dec. 2025</p>
+        <p className="text-right"> September - December 2025</p>
       </div>
       <div className="space-y-4">
         <div className="my-6 aspect-video">

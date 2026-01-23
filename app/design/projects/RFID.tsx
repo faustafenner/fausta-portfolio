@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+
 function ArrowIcon() {
   return (
     <svg
@@ -17,26 +22,121 @@ function ArrowIcon() {
 }
 
 export default function RFID() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "/RFID24/1.JPG",
+    "/RFID24/2.JPG",
+    "/RFID24/4.JPG",
+    "/RFID24/5.JPG",
+    "/RFID24/6.JPG",
+    "/RFID24/7.JPG",
+    "/RFID24/8.JPG",
+    "/RFID24/9.JPG",
+    "/RFID24/10.JPG",
+  ];
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <div>
       <div className="flex justify-between items-start">
         <div>
-          <h2 className="text-3xl animate-[jump_0.5s_ease-out]">RFID24</h2>
+          <h2 className="text-3xl animate-[jump_0.5s_ease-out]">RFID25</h2>
           <p>
             <a
               href="https://sparxhockey.com/"
               className="inline-flex items-center"
             >
-              Created at Sparx Hockey
+              Affiliation: Sparx Hockey
               <ArrowIcon />
             </a>
           </p>
+          <p className="mt-4 ">
+            <strong>Skills:</strong> UX Design, Full Stack Development
+          </p>
+          <p>
+            <strong>Tools:</strong> Microsoft WPF, C#, XAML
+          </p>
         </div>
-        <p className="text-right">2025</p>
+        <p className="text-right">March - June 2025</p>
       </div>
-      <p className="text-lg mb-4 mt-8">coming soon!</p>
-      <div className="space-y-4">
-        {/* Add your project content, images, etc. */}
+      <p className="text-lg mt-8 mb-2">
+        Custom full-stack application designed and programmed two 25-ring trays
+        at a time for Sparx Hockey. Offered real-time RFID tag interaction
+        (querying and programming) with an interactive and dynamic UI.
+      </p>
+
+      <p className="text-lg">
+        Implemented in Microsoft WPF, utilzing MVVM architecture, event driven
+        programming, asynchronous functions, and UI threads. Integrated serial
+        communciation protols.
+      </p>
+
+      <div className="relative">
+        <div className="relative w-full h-60 sm:h-80 md:h-96 lg:h-[600px]">
+          <Image
+            src={images[currentIndex]}
+            alt={`RFID24 Image ${currentIndex + 1}`}
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        {/* Navigation buttons */}
+        <button
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black text-white p-3 rounded-full hover:bg-gray-800 transition-colors"
+          aria-label="Previous image"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <button
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black text-white p-3 rounded-full hover:bg-gray-800 transition-colors"
+          aria-label="Next image"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        {/* Image counter */}
+        <div className="mt-4 text-center text-sm text-gray-600">
+          {currentIndex + 1} / {images.length}
+        </div>
+        <p>
+          <a
+            href="https://sparxhockey.com/pages/grinding-rings-learn-more"
+            className="inline-flex items-center"
+          >
+            <strong>The Sparx Grinding Ring</strong>
+
+            <ArrowIcon />
+          </a>
+        </p>
       </div>
     </div>
   );

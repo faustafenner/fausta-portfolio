@@ -31,39 +31,84 @@ export default function Rats() {
         </a>
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-        <div className="relative w-full h-[500px] md:h-[500px]">
-          <video controls muted className="w-full h-full object-cover ">
-            <source src="/rats.MOV" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+      <p className="mt-4 ">
+        <strong>Methods:</strong> Screen Printing, Digital Illustration
+      </p>
+
+      <div className="space-y-4 mt-8">
+        {/* First row: Video and rats_1 */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px]">
+            <video controls muted className="w-full h-full object-cover">
+              <source src="/rats.MOV" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px] relative">
+            <Image
+              src="/rats_1.jpg"
+              alt="RATS! Project Image 1"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
 
-        <div className="relative w-full h-[500px] md:h-[500px]">
-          <Image
-            src="/rats_1.jpg"
-            alt="RATS! Project Image 1"
-            fill
-            className="object-cover "
-          />
-        </div>
+        {/* Second row: rats_2, rats_3, rats_4 */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+            <Image
+              src="/rats_2.jpg"
+              alt="RATS! Project Image 2"
+              fill
+              className="object-cover"
+            />
+          </div>
 
-        <div className="relative w-full h-[500px] md:h-[500px]">
-          <Image
-            src="/rats_2.jpg"
-            alt="RATS! Project Image 2"
-            fill
-            className="object-cover "
-          />
-        </div>
+          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+            <Image
+              src="/rats_3.jpg"
+              alt="RATS! Project Image 3"
+              fill
+              className="object-cover"
+            />
+          </div>
 
-        <div className="relative w-full h-[500px] md:h-[500px]">
-          <Image
-            src="/rats_3.jpg"
-            alt="RATS! Project Image 3"
-            fill
-            className="object-cover "
-          />
+          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+            <Image
+              src="/rats_4.jpeg"
+              alt="RATS! Project Image 4"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <p className="mt-8 mb-8">
+          Designed and Screen Printed at FabricFabrik studio in Vienna, Austria.
+          Sited with one of its inspirations: street art along the Danube canal.
+          Motif designed as an ode to motifs present in Vienna museums.{" "}
+        </p>
+
+        {/* Process images */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+            <Image
+              src="/rats-process-1.jpeg"
+              alt="RATS! Process Image 1"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+            <Image
+              src="/rats-process-4.jpeg"
+              alt="RATS! Process Image 4"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
