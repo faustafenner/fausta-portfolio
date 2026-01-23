@@ -6,7 +6,7 @@ export default function Photography() {
           Photography Portfolio
         </h2>
       </div>
-
+      <p>coming soon!</p>
       <div className="space-y-4">
         {/* Add your project content, images, etc. */}
       </div>
