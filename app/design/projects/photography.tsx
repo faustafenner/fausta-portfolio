@@ -1,8 +1,12 @@
 export default function Photography() {
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-4">Project 1</h2>
-      <p className="text-lg mb-4">Description</p>
+      <div className="flex justify-between items-start">
+        <h2 className="text-3xl animate-[jump_0.5s_ease-out]">
+          Photography Portfolio
+        </h2>
+      </div>
+
       <div className="space-y-4">
         {/* Add your project content, images, etc. */}
       </div>

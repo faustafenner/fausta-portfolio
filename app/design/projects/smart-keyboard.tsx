@@ -21,40 +21,68 @@ function ArrowIcon() {
 export default function SmartKeyboard() {
   return (
     <div>
-      <h2 className="text-3xl ">Smart Keyboard</h2>
-      <p>2025</p>
+      <div className="flex justify-between items-start">
+        <div>
+          <h2 className="text-3xl animate-[jump_0.5s_ease-out]">
+            Smart Keyboard
+          </h2>
+          <p>
+            <a
+              href="https://www.northeastern.edu/i"
+              className="inline-flex items-center"
+            >
+              Affiliation: Northeastern University
+              <ArrowIcon />
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://news.northeastern.edu/2025/12/16/interactive-keyboard-student-designed/"
+              className="inline-flex items-center"
+            >
+              Press: Northeastern Global News Article
+              <ArrowIcon />
+            </a>
+          </p>
+
+          <p className="mt-4 ">
+            <strong>Role:</strong> UX Design, Back-end Programming, Front-end
+            Programming
+          </p>
+          <p>
+            <strong>Tools:</strong> Figma, React, Python
+          </p>
+        </div>
+        <p className="text-right"> Sept.-Dec. 2025</p>
+      </div>
       <div className="space-y-4">
-        <div className="my-6">
+        <div className="my-6 aspect-video">
           <iframe
             width="100%"
-            height="400"
+            height="100%"
             src="https://www.youtube.com/embed/-kTLUU3APOs"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
-        <p>
-          <strong>Role:</strong> Front-end Coding, Design
-        </p>
-        <p>
-          <strong>Tools:</strong> Figma, React, Python
-        </p>
-
-        <p className="text-lg mb-4 mt-4">
-          This project is an interactive learning keyboard designed to support
-          2nd-grade students with disabilities in developing typing and literacy
-          skills. The system assists learners who can recognize individual keys
-          but face challenges in distinguishing between multiple buttons
-          simultaneously. To accommodate diverse needs, the keyboard integrates
-          visual and auditory feedback that guides students in selecting the
-          correct key. Teachers are provided with customization tools to tailor
-          the experience to each learner. They can adjust word lists, control
-          the complexity of presented tasks, and scaffold learning step by step.
-          This adaptability ensures that students receive both accessibility and
-          challenge at their own pace. Ultimately, the project aims to foster
-          independence, literacy growth, and confidence in communication for
-          young learners with special needs.
+        <p className="text-lg mb-8 mt-8">
+          <p className="text-lg mb-8 mt-8">
+            An interactive learning keyboard designed for a 2nd-grade student
+            with mobility challenges who communicates nonverbally. Despite
+            strong literacy skills and a love of technology, he struggles with
+            visually scanning a standard keyboard and staying focused on target
+            keys—making traditional typing instruction ineffective. Our solution
+            combines custom hardware (a keyboard with individually addressable
+            LEDs) and software that highlights the correct keys, provides visual
+            feedback, and rewards successful input. Teachers can customize word
+            lists, adjust task complexity, and scaffold learning from single
+            words to full sentences. The system also restricts interaction to
+            only the relevant keys, minimizing distractions. The goal is to
+            foster typing independence, literacy growth, and confidence in
+            communication for young learners with special needs.
+          </p>
         </p>
 
         <Image
@@ -62,11 +90,23 @@ export default function SmartKeyboard() {
           alt="Smart Keyboard"
           width={800}
           height={600}
-          className="mt-6"
+          className="mt-6 w-full h-auto"
         />
         <p className="italic">
-          Description: Northeastern Enabling Engineering team testing the final
-          project with our client, 2nd grader Veer.
+          Image Description: Northeastern Enabling Engineering team presenting
+          final project to client.
+        </p>
+
+        <p className="text-lg mb-8 mt-8">
+          <p className="text-lg mb-8 mt-8">
+            UX design was done using Figma, and went through several iterations
+            of client feedback. The back-end was built in Python to interface
+            with SteelSeries GG, a public SDK for controlling keyboard lighting.
+            The front-end development was done using React to create a
+            user-friendly interface for teachers to customize lessons and track
+            student progress. A data tracking tool was also implemented based on
+            client feedback to monitor student performance over time.
+          </p>
         </p>
 
         <p>
@@ -75,17 +115,6 @@ export default function SmartKeyboard() {
             className="inline-flex items-center"
           >
             <strong>Project Site</strong>
-
-            <ArrowIcon />
-          </a>
-        </p>
-
-        <p>
-          <a
-            href="https://news.northeastern.edu/2025/12/16/interactive-keyboard-student-designed/"
-            className="inline-flex items-center"
-          >
-            <strong>Northeastern Global News Article</strong>
 
             <ArrowIcon />
           </a>

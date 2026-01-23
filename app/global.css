@@ -1,8 +1,19 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Kosugi+Maru&display=swap");
 
-* {
-  font-family: "Kosugi Maru", sans-serif;
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-7px);
+  }
 }
 
 ::selection {
