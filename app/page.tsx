@@ -43,13 +43,13 @@ export default function Page() {
         className={`transition-opacity duration-500 ${showEngineering ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
-          <Image
+          {/* <Image
             src="/engineering_photo.jpg"
             alt=""
             width={600}
             height={400}
             className="object-cover object-center"
-          />
+          /> */}
         </div>
         {/* 
         <div className="fixed pointer-events-none z-0 top-52 right-[-150px] opacity-50">
@@ -67,13 +67,13 @@ export default function Page() {
         className={`transition-opacity duration-500 ${showDesign ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
-          <Image
+          {/* <Image
             src="/design_photo.jpg"
             alt=""
             width={600}
             height={400}
             className="object-cover object-center"
-          />
+          /> */}
         </div>
         {/* 
         <div className="fixed pointer-events-none z-0 top-52 right-[-150px] opacity-50">
@@ -91,7 +91,7 @@ export default function Page() {
         <div className="flex flex-col md:flex-row gap-8 md:gap-20 text-2xl md:text-4xl">
           <Link
             href="/design"
-            className="flex items-center hover:text-white"
+            className="flex items-center hover:text-[#dfede3]"
             onMouseEnter={() => setShowDesign(true)}
             onMouseLeave={() => setShowDesign(false)}
           >
@@ -101,7 +101,7 @@ export default function Page() {
 
           <Link
             href="/engineering"
-            className="flex items-center hover:text-white"
+            className="flex items-center hover:text-[#dfede3]"
             onMouseEnter={() => setShowEngineering(true)}
             onMouseLeave={() => setShowEngineering(false)}
           >
