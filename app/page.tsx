@@ -28,6 +28,16 @@ export default function Page() {
 
   return (
     <>
+      <Image
+        src="/home-bg.png"
+        alt="Background"
+        fill
+        className="-z-10 opacity-50"
+        style={{ objectFit: "cover", transform: "scale(1.5)" }}
+        // quality={100}
+        priority
+      />
+
       <div className="fixed inset-0 pointer-events-none z-0 mt-8">
         <Image
           src="/fausta_logo.png"
