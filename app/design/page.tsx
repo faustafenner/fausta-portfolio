@@ -22,9 +22,10 @@ const projects = [
 ];
 
 export default function Page() {
-  const [selectedProject, setSelectedProject] = useState(0);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const CurrentProject = projects[selectedProject].component;
+  const CurrentProject =
+    selectedProject !== null ? projects[selectedProject].component : null;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +45,13 @@ export default function Page() {
       <div className="flex flex-col md:flex-row gap-8 min-h-screen background-white">
         {/* Left side - Project content */}
         <div className="flex-1 order-2 md:order-1">
-          <CurrentProject />
+          {selectedProject === null ? (
+            <div className="flex items-center justify-center min-h-[60vh]">
+              <p className="text-lg">explore projects via navbar</p>
+            </div>
+          ) : (
+            CurrentProject && <CurrentProject />
+          )}
         </div>
 
         {/* Right side - Project list */}
