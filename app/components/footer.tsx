@@ -15,7 +15,7 @@ export default function Footer() {
           contact
         </a>
       </div>
-      <p className="text-sm text-right mt-4">2026 Fausta Fenner</p>
+      <p className="text-sm text-right mt-4">Fausta Fenner 2026</p>
     </footer>
   );
 }
