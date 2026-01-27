@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FadeInOnScroll } from "../../components/fade-in-on-scroll";
 
 function ArrowIcon() {
   return (
@@ -85,13 +86,15 @@ export default function SmartKeyboard() {
           </p>
         </p>
 
-        <Image
-          src="/smart_keyboard.JPEG"
-          alt="Smart Keyboard"
-          width={800}
-          height={600}
-          className="mt-6 w-full h-auto"
-        />
+        <FadeInOnScroll>
+          <Image
+            src="/smart_keyboard.JPEG"
+            alt="Smart Keyboard"
+            width={800}
+            height={600}
+            className="mt-6 w-full h-auto"
+          />
+        </FadeInOnScroll>
         <p className="italic">
           Image Description: Northeastern Enabling Engineering team presenting
           final project to client.

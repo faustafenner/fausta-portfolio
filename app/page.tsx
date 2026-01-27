@@ -87,7 +87,6 @@ export default function Page() {
         </div> */}
       </div>
 
-      <p>we are currently undergoing construction!</p>
       <section className="flex justify-center items-center my-64 relative z-10">
         <div className="flex flex-col items-center"></div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-20 text-2xl md:text-4xl">

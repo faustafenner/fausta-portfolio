@@ -34,7 +34,13 @@ export default function BEAM() {
         <p className="text-right">January - March 2025</p>
       </div>
 
-      <p className="text-lg mt-8">Coming soon!</p>
+      <div className="mt-8">
+        <iframe
+          src="/Beam-Dashboard.pdf"
+          className="w-full h-[600px] md:h-[800px] border border-gray-300"
+          title="BEAM Production Data Tool"
+        />
+      </div>
     </div>
   );
 }

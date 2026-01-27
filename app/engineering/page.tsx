@@ -47,7 +47,7 @@ export default function Page() {
           {selectedProject === null ? (
             <div className="flex items-center justify-center min-h-[60vh]">
               <p className="text-lg flex items-center gap-2">
-                explore projects
+                explore projects via Navbar
                 <svg
                   width="20"
                   height="20"

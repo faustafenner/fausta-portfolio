@@ -1,3 +1,4 @@
+import Image from "next/image";
 function ArrowIcon() {
   return (
     <svg
@@ -19,18 +20,34 @@ function ArrowIcon() {
 export default function Page() {
   return (
     <div>
+      <Image
+        src="/contact-background.png"
+        alt="Background"
+        fill
+        className="-z-10 opacity-30"
+        style={{ objectFit: "cover", transform: "scale(1)" }}
+        quality={100}
+        priority
+      />
+
       <section className="my-8 flex justify-end">
-        <p className="text-2xl mb-8 tracking-tighter text-right border-b border-black pb-2 inline-block">
+        {/* <p className="text-2xl mb-8 tracking-tighter text-right border-b border-black pb-2 inline-block">
           contact
-        </p>
+        </p> */}
       </section>
-      <div className="flex flex-col items-center gap-4 text-lg md:text-xl text-center">
+      <div className="flex flex-col items-center gap-4 text-lg md:text-xl text-center mb-8">
         <p>
-          email:
-          <a href="mailto:fennerfausta@gmail.com">fennerfausta@gmail.com</a>
+          <a
+            href="mailto:fennerfausta@gmail.com"
+            className="inline-flex items-center"
+          >
+            fennerfausta@gmail.com
+            <ArrowIcon />
+          </a>
         </p>
       </div>
-      <div className="flex flex-col items-center gap-4 text-lg md:text-xl text-center">
+
+      <div className="flex flex-col items-center gap-4 text-lg md:text-xl text-center mb-8">
         <p>
           <a
             href="https://www.linkedin.com/in/fausta-fenner/"
