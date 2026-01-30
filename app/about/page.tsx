@@ -81,7 +81,7 @@ export default function Page() {
               </a>
 
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:fennerfausta@gmail.com"
                 className="flex items-center border border-[#EA5814] text-[#EA5814] px-6 py-3 hover:bg-orange-50 transition-colors w-fit"
               >
                 EMAIL
