@@ -1,12 +1,22 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/about") {
+    return null;
+  }
+
   return (
     <footer className="mt-8 mb-10">
       <div className="flex justify-end gap-4">
         <a
           href="/about"
-          className="border border-white px-4 py-2 bg-transparent text-white hover:bg-black hover:text-white transition-colors"
+          className="px-8 py-2 text-lg bg-transparent text-orange-500 hover:bg-black hover:text-white transition-colors"
         >
-          ABOUT/CONTACT
+          ABOUT | CONTACT
         </a>
         {/* <a
           href="/contact"
