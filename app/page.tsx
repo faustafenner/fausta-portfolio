@@ -103,12 +103,12 @@ export default function Page() {
         </div> */}
         </div>
 
-        <section className="flex justify-center items-center my-64 relative z-10">
+        <section className="flex justify-center items-center my-32 md:my-64 relative z-10">
           <div className="flex flex-col items-center"></div>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-20 text-2xl md:text-4xl">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-20 text-lg md:text-4xl">
             <Link
               href="/design"
-              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500  bg-black/50 px-12 py-6 ${inder.className}`}
+              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500  bg-black/50 px-6 md:px-12 py-3 md:py-6 ${inder.className}`}
               onMouseEnter={() => setShowDesign(true)}
               onMouseLeave={() => setShowDesign(false)}
             >
@@ -118,7 +118,7 @@ export default function Page() {
 
             <Link
               href="/engineering"
-              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500 bg-black/50 px-12 py-6 ${inder.className}`}
+              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500 bg-black/50 px-6 md:px-12 py-3 md:py-6 ${inder.className}`}
               onMouseEnter={() => setShowEngineering(true)}
               onMouseLeave={() => setShowEngineering(false)}
             >

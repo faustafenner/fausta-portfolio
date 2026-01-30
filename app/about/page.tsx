@@ -26,7 +26,7 @@ export default function Page() {
         {/* Image - left side, full height */}
         <div className="w-full md:w-1/2 relative h-96 md:h-auto">
           <Image
-            src="/profile-photo.jpg"
+            src="/Profile-photo.jpg"
             alt="Fausta Fenner"
             fill
             className="object-cover"
