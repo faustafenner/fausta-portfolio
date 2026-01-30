@@ -11,19 +11,22 @@ export function Navbar() {
   }
 
   const getPageName = () => {
-    if (pathname.startsWith("/design")) return "design folio";
-    if (pathname.startsWith("/engineering")) return "engineering folio";
-    if (pathname.startsWith("/about")) return "about";
-    if (pathname.startsWith("/contact")) return "contact";
+    if (pathname.startsWith("/design")) return "DESIGN PORTFOLIO";
+    if (pathname.startsWith("/engineering")) return "ENGINEERING PORTFOLIO";
+    if (pathname.startsWith("/about")) return "ABOUT";
+    if (pathname.startsWith("/contact")) return "CONTACT";
     return "";
   };
 
   const pageName = getPageName();
 
   return (
-    <nav className="mb-16 text-2xl animate-[jump_0.5s_ease-out]">
-      <Link href="/" className="hover:text-neutral-600 underline decoration-green-700">
-        faustafenner
+    <nav className="mb-16 text-2xl">
+      <Link
+        href="/"
+        className="hover:text-neutral-600 underline decoration-black underline-offset-2"
+      >
+        FAUSTAFENNER
       </Link>
       {pageName && (
         <>

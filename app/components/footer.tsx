@@ -4,18 +4,18 @@ export default function Footer() {
       <div className="flex justify-end gap-4">
         <a
           href="/about"
-          className="border border-black rounded-xl px-4 py-2 bg-transparent text-black hover:bg-black hover:text-white transition-colors"
+          className="border border-white px-4 py-2 bg-transparent text-white hover:bg-black hover:text-white transition-colors"
         >
-          about
+          ABOUT/CONTACT
         </a>
-        <a
+        {/* <a
           href="/contact"
-          className="border border-black rounded-xl px-4 py-2 bg-transparent text-black hover:bg-black hover:text-white transition-colors"
+          className="border border-white rounded-xl px-4 py-2 bg-transparent text-white hover:bg-black hover:text-white transition-colors"
         >
           contact
-        </a>
+        </a> */}
       </div>
-      <p className="text-sm text-right mt-4">Fausta Fenner 2026</p>
+      {/* <p className="text-sm text-white text-right mt-4">Fausta Fenner 2026</p> */}
     </footer>
   );
 }
