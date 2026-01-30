@@ -22,7 +22,7 @@ function ArrowIcon() {
 export default function Page() {
   return (
     <div>
-      <section className="relative flex flex-col md:flex-row min-h-screen">
+      <section className="relative flex flex-col md:flex-row min-h-screen mb-8">
         {/* Image - left side, full height */}
         <div className="w-full md:w-1/2 relative h-96 md:h-auto">
           <Image
@@ -39,7 +39,7 @@ export default function Page() {
           <div className="max-w-md">
             <h1 className="mb-6 font-bold text-2xl text-[#EA5814]">Hello!</h1>
             <p>
-              Hello! I am a graduating senior at Northeastern University,{" "}
+              I am a graduating senior at Northeastern University,{" "}
               <strong>majoring in Computer Engineering </strong> with minors in
               Art and Global Fashion Studies.{" "}
             </p>

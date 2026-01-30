@@ -16,7 +16,7 @@ const projects = [
   { id: 4, name: "Smart Keyboard", component: SmartKeyboard },
   { id: 6, name: "Groove", component: Groove },
   { id: 7, name: "Syn-aesthetic", component: SynAesthetic },
-  { id: 8, name: "ECG Instrumentation Amplifier", component: ECG },
+  // { id: 8, name: "ECG Instrumentation Amplifier", component: ECG },
 ];
 
 export default function Page() {
@@ -46,8 +46,8 @@ export default function Page() {
         <div className="flex-1 order-2 md:order-1">
           {selectedProject === null ? (
             <div className="flex items-center justify-center min-h-[60vh]">
-              <p className="text-lg flex items-center gap-2">
-                explore projects via Navbar
+              <p className="text-lg flex items-center text-orange-500 gap-2">
+                EXPLORE VIA NAVBAR
                 <svg
                   width="20"
                   height="20"

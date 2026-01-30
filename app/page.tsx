@@ -103,7 +103,7 @@ export default function Page() {
         </div> */}
         </div>
 
-        <section className="flex justify-center items-center my-32 md:my-64 relative z-10">
+        <section className="flex justify-center items-center my-64 relative z-10">
           <div className="flex flex-col items-center"></div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-20 text-lg md:text-4xl">
             <Link

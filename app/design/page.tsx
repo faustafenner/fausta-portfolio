@@ -18,7 +18,7 @@ const projects = [
   { id: 5, name: "RATS!", component: Rats },
   // { id: 6, name: "THE PEOPLE I LEFT BEHIND", component: People },
   { id: 7, name: "FINE ART", component: FineArt },
-  { id: 8, name: "PHOTOGRAPHY", component: Photography },
+  // { id: 8, name: "PHOTOGRAPHY", component: Photography },
 ];
 
 export default function Page() {
@@ -46,8 +46,8 @@ export default function Page() {
         {/* Left side - Project content */}
         <div className="flex-1 order-2 md:order-1">
           {selectedProject === null ? (
-            <div className="flex items-center justify-center min-h-[60vh]">
-              <p className="text-lg">explore projects via navbar</p>
+            <div className="flex items-center text-orange-500 justify-center min-h-[60vh]">
+              <p className="text-lg">EXPLORE VIA NAVBAR</p>
             </div>
           ) : (
             CurrentProject && <CurrentProject />
