@@ -3,6 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { Inder } from "next/font/google";
+import { PageTransition } from "./components/page-transition";
+
+const inder = Inder({ subsets: ["latin"], weight: "400" });
 
 function ArrowIcon() {
   return (
@@ -27,41 +31,43 @@ export default function Page() {
   const [showDesign, setShowDesign] = useState(false);
 
   return (
-    <>
-      <Image
-        src="/home-bg.png"
-        alt="Background"
-        fill
-        className="-z-10 opacity-50"
-        style={{ objectFit: "cover", transform: "scale(1.5)" }}
-        // quality={100}
-        priority
-      />
-
-      <div className="fixed inset-0 pointer-events-none z-0 mt-8">
+    <PageTransition>
+      <>
+        <div className="fixed inset-0 bg-black -z-20"></div>
         <Image
-          src="/fausta_logo.png"
-          alt="Logo"
-          width={500}
-          height={500}
-          className="object-cover object-center"
-          // className="w-40 h-40 md:w-96 md:h-96 lg:w-[600px] lg:h-[600px]"
+          src="/home-background-image.jpg"
+          alt="Background"
+          fill
+          className="-z-10 opacity-50"
+          style={{ objectFit: "cover" }}
+          // quality={100}
+          priority
         />
-      </div>
 
-      <div
-        className={`transition-opacity duration-500 ${showEngineering ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-      >
-        <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
-          {/* <Image
+        <div className="fixed inset-0 pointer-events-none z-0 mt-2">
+          <Image
+            src="/fausta-logo-orange2.png"
+            alt="Logo"
+            width={750}
+            height={750}
+            className="object-cover object-center"
+            // className="w-40 h-40 md:w-96 md:h-96 lg:w-[600px] lg:h-[600px]"
+          />
+        </div>
+
+        <div
+          className={`transition-opacity duration-500 ${showEngineering ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        >
+          <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
+            {/* <Image
             src="/engineering_photo.jpg"
             alt=""
             width={600}
             height={400}
             className="object-cover object-center"
           /> */}
-        </div>
-        {/* 
+          </div>
+          {/* 
         <div className="fixed pointer-events-none z-0 top-52 right-[-150px] opacity-50">
           <Image
             src="/engineering_photo.jpg"
@@ -71,21 +77,21 @@ export default function Page() {
             className="object-cover object-center"
           />
         </div> */}
-      </div>
+        </div>
 
-      <div
-        className={`transition-opacity duration-500 ${showDesign ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-      >
-        <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
-          {/* <Image
+        <div
+          className={`transition-opacity duration-500 ${showDesign ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        >
+          <div className="fixed pointer-events-none z-0 top-52 ml-48 opacity-50">
+            {/* <Image
             src="/design_photo.jpg"
             alt=""
             width={600}
             height={400}
             className="object-cover object-center"
           /> */}
-        </div>
-        {/* 
+          </div>
+          {/* 
         <div className="fixed pointer-events-none z-0 top-52 right-[-150px] opacity-50">
           <Image
             src="/design_photo.jpg"
@@ -95,32 +101,33 @@ export default function Page() {
             className="object-cover object-center"
           />
         </div> */}
-      </div>
-
-      <section className="flex justify-center items-center my-64 relative z-10">
-        <div className="flex flex-col items-center"></div>
-        <div className="flex flex-col md:flex-row gap-8 md:gap-20 text-2xl md:text-4xl">
-          <Link
-            href="/design"
-            className="flex items-center hover:text-[#dfede3]"
-            onMouseEnter={() => setShowDesign(true)}
-            onMouseLeave={() => setShowDesign(false)}
-          >
-            design
-            <ArrowIcon />
-          </Link>
-
-          <Link
-            href="/engineering"
-            className="flex items-center hover:text-[#dfede3]"
-            onMouseEnter={() => setShowEngineering(true)}
-            onMouseLeave={() => setShowEngineering(false)}
-          >
-            engineering
-            <ArrowIcon />
-          </Link>
         </div>
-      </section>
-    </>
+
+        <section className="flex justify-center items-center my-64 relative z-10">
+          <div className="flex flex-col items-center"></div>
+          <div className="flex flex-col md:flex-row gap-8 md:gap-20 text-2xl md:text-4xl">
+            <Link
+              href="/design"
+              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500  bg-black/50 px-12 py-6 ${inder.className}`}
+              onMouseEnter={() => setShowDesign(true)}
+              onMouseLeave={() => setShowDesign(false)}
+            >
+              DESIGN
+              <ArrowIcon />
+            </Link>
+
+            <Link
+              href="/engineering"
+              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500 bg-black/50 px-12 py-6 ${inder.className}`}
+              onMouseEnter={() => setShowEngineering(true)}
+              onMouseLeave={() => setShowEngineering(false)}
+            >
+              ENGINEERING
+              <ArrowIcon />
+            </Link>
+          </div>
+        </section>
+      </>
+    </PageTransition>
   );
 }

@@ -11,14 +11,14 @@ import FineArt from "./projects/fine-art";
 import Photography from "./projects/photography";
 
 const projects = [
-  { id: 1, name: "syn-aesthetic", component: SynAesthetic },
-  { id: 2, name: "smart keyboard", component: SmartKeyboard },
+  { id: 1, name: "SYN-AESTHETIC", component: SynAesthetic },
+  { id: 2, name: "SMART KEYBOARD", component: SmartKeyboard },
   { id: 3, name: "RFID25", component: RFID },
-  { id: 4, name: "groove", component: Groove },
-  { id: 5, name: "rats!", component: Rats },
-  // { id: 6, name: "the people i left behind", component: People },
-  { id: 7, name: "fine art", component: FineArt },
-  { id: 8, name: "photography", component: Photography },
+  { id: 4, name: "GROOVE", component: Groove },
+  { id: 5, name: "RATS!", component: Rats },
+  // { id: 6, name: "THE PEOPLE I LEFT BEHIND", component: People },
+  { id: 7, name: "FINE ART", component: FineArt },
+  { id: 8, name: "PHOTOGRAPHY", component: Photography },
 ];
 
 export default function Page() {
