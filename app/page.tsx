@@ -35,10 +35,10 @@ export default function Page() {
       <>
         <div className="fixed inset-0 bg-black -z-20"></div>
         <Image
-          src="/home-background-image.jpg"
+          src="/home-background-photo.jpg"
           alt="Background"
           fill
-          className="-z-10 opacity-50"
+          className="-z-10 opacity-80"
           style={{ objectFit: "cover" }}
           // quality={100}
           priority
@@ -46,10 +46,10 @@ export default function Page() {
 
         <div className="fixed inset-0 pointer-events-none z-0 mt-2">
           <Image
-            src="/fausta-logo-orange2.png"
+            src="/fausta-light-orange-logo.png"
             alt="Logo"
-            width={750}
-            height={750}
+            width={700}
+            height={700}
             className="object-cover object-center"
             // className="w-40 h-40 md:w-96 md:h-96 lg:w-[600px] lg:h-[600px]"
           />
@@ -104,26 +104,34 @@ export default function Page() {
         </div>
 
         <section className="flex justify-center items-center my-64 relative z-10">
-          <div className="flex flex-col items-center"></div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-20 text-lg md:text-4xl">
-            <Link
-              href="/design"
-              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500  bg-black/50 px-6 md:px-12 py-3 md:py-6 ${inder.className}`}
-              onMouseEnter={() => setShowDesign(true)}
-              onMouseLeave={() => setShowDesign(false)}
-            >
-              DESIGN
-              <ArrowIcon />
-            </Link>
+          <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-20 text-lg md:text-4xl">
+              <Link
+                href="/design"
+                className={`flex items-center text-[#F67538] hover:text-white border-2 border-[#F67538]  bg-black/50 px-6 md:px-12 py-3 md:py-6 ${inder.className}`}
+                onMouseEnter={() => setShowDesign(true)}
+                onMouseLeave={() => setShowDesign(false)}
+              >
+                DESIGN
+                <ArrowIcon />
+              </Link>
+
+              <Link
+                href="/engineering"
+                className={`flex items-center text-[#F67538] hover:text-white border-2 border-[#F67538] bg-black/50 px-6 md:px-12 py-3 md:py-6 ${inder.className}`}
+                onMouseEnter={() => setShowEngineering(true)}
+                onMouseLeave={() => setShowEngineering(false)}
+              >
+                ENGINEERING
+                <ArrowIcon />
+              </Link>
+            </div>
 
             <Link
-              href="/engineering"
-              className={`flex items-center text-[#EA5814] hover:text-white border-2 border-orange-500 bg-black/50 px-6 md:px-12 py-3 md:py-6 ${inder.className}`}
-              onMouseEnter={() => setShowEngineering(true)}
-              onMouseLeave={() => setShowEngineering(false)}
+              href="/about"
+              className={`text-[#F67538] mt-8 hover:text-white text-lg md:text-lg ${inder.className}`}
             >
-              ENGINEERING
-              <ArrowIcon />
+              ABOUT | CONTACT
             </Link>
           </div>
         </section>

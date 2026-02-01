@@ -45,15 +45,22 @@ export default function SynAesthetic() {
         <strong>Tools:</strong> Processing
       </p>
 
-      <div className="my-6 aspect-video">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/dsSjIKlgMys"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Overview
+      </p>
+
+      <div className="my-2">
+        <video
+          controls
+          className="w-full"
+          poster="/syn-aesthetic/thumbnail.png"
+        >
+          <source
+            src="/syn-aesthetic/synaesthetic-video.mov"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <p className="text-lg mb-4 mt-6">
@@ -78,9 +85,55 @@ export default function SynAesthetic() {
         experiences.{" "}
       </p>
 
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Background
+      </p>
+
+      <img
+        src="/syn-aesthetic/facade.png"
+        alt="Syn-aesthetic facade at Ars Electronica"
+        className="my-4"
+      />
+
       <p className="text-lg mb-4 mt-6">
-        The project can be viewed on the facade of Ars Electronica, in the form
-        of 38,500 LEDs.
+        Ars Electronica in Linz, Austria focuses on new technologies and how
+        they change the way we live and work together. Their Futurelab is an
+        interdisciplinary research and development unit that explores the
+        intersection of art, technology, and society. Northeastern University
+        students recieved the opportunity to a program a project on its 5,100
+        square meter facade, customizing 38,500 LEDs in order to explore a
+        deeper concept in the world of human-computer interaction.
+      </p>
+
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Process
+      </p>
+
+      <img
+        src="/syn-aesthetic/development.jpg"
+        alt="Syn-aesthetic sketches"
+        className="my-4"
+      />
+
+      <p className="text-lg mb-4 mt-6">
+        Development began with an ideation workshop led by Ars Electronica. We
+        explored various concepts around sensory experiences, human computer
+        interaction, and the relationship between visuals and sound.
+      </p>
+
+      <p className="text-lg mb-4 mt-6">
+        Syn-aethetic particularly focuses on sound and vision, drawing
+        inspiration from synesthesia. A custom score was produced, which
+        inspired the visuals that would accompany on the facade.
+      </p>
+
+      <p className="text-lg mb-4 mt-6">
+        The programming was done in Processing, using a custom library provided
+        by Ars Electronica that allowed for communication with the LED facade.
+        The challenge was to create visuals that not only synchronized with the
+        sound but also evoked the intended emotional responses. Various visual
+        elements were experimented with, including abstract shapes, colors, and
+        patterns that changed dynamically with the music.
       </p>
 
       <p className="text-lg mb-4 mt-6">
