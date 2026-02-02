@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
 
 function ArrowIcon() {
   return (
@@ -66,25 +67,21 @@ export default function RFID() {
         </div>
         <p className="text-right">March - June 2025</p>
       </div>
-      <p className="text-lg mt-8 mb-2">
-        Custom full-stack application designed and programmed two 25-ring trays
-        at a time for Sparx Hockey. Offered real-time RFID tag interaction
-        (querying and programming) with an interactive and dynamic UI.
+
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Overview
       </p>
 
-      <p className="text-lg">
-        Implemented in Microsoft WPF, utilzing MVVM architecture, event driven
-        programming, asynchronous functions, and UI threads. Integrated serial
-        communciation protols.
-      </p>
+      <p className="mt-2">*Note that sensitive information has been omitted.</p>
 
-      <div className="relative">
-        <div className="relative w-full h-60 sm:h-80 md:h-96 lg:h-[600px]">
+      <div className="relative mt-4">
+        <div className="w-full rounded-xl overflow-hidden relative">
           <Image
             src={images[currentIndex]}
             alt={`RFID24 Image ${currentIndex + 1}`}
-            fill
-            className="object-contain"
+            width={1600}
+            height={1200}
+            className="w-full h-auto scale-[1.02]"
           />
         </div>
 
@@ -124,20 +121,96 @@ export default function RFID() {
         </button>
 
         {/* Image counter */}
-        <div className="mt-4 text-center text-sm text-gray-600">
+        <div className="text-center text-sm text-gray-600 mt-4">
           {currentIndex + 1} / {images.length}
         </div>
-        <p>
-          <a
-            href="https://sparxhockey.com/pages/grinding-rings-learn-more"
-            className="inline-flex items-center"
-          >
-            <strong>The Sparx Grinding Ring</strong>
-
-            <ArrowIcon />
-          </a>
-        </p>
       </div>
+
+      <p className="text-lg mt-8 mb-2">
+        RFID25 is a custom full-stack application created for Sparx Hockey,
+        designed and programmed to interact with two 25-grinding ring trays at a
+        time. Offers RFID tag interaction (querying and programming) with an
+        interactive and dynamic UI, offering real-time feedback on programming
+        status, error handling, and user guidance.
+      </p>
+
+      <p className="text-lg">
+        Implemented in Microsoft WPF, utilzing MVVM architecture, event driven
+        programming, asynchronous functions, and UI threads. Integrated serial
+        communciation protols.
+      </p>
+
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Background
+      </p>
+
+      <FadeInOnScroll className="mt-4">
+        <Image
+          src="/RFID24/sparx-bg.webp"
+          alt="Sparx Hockey Background"
+          width={800}
+          height={600}
+          className="w-full h-auto"
+        />
+      </FadeInOnScroll>
+
+      <p className="text-lg mt-8 mb-2">
+        Sparx Hockey is a leading manufacturer of high-performance at home skate
+        sharpening equipment, renowned for its innovative designs and commitment
+        to quality. Their patended design creates a perfect sharpening every
+        time with virtually no adjustments necessary, making it a favorite for
+        at home users and more than 25 NHL teams.
+      </p>
+
+      <FadeInOnScroll>
+        <div className="relative w-full h-96 overflow-hidden rounded-lg mt-4">
+          <Image
+            src="/RFID24/sparx-ring.webp"
+            alt="Sparx Hockey Grinding Ring"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </FadeInOnScroll>
+
+      <p className="text-lg mt-8 mb-2">
+        The Sparx grinding ring is a key component of the skate sharpening
+        system, designed to hold and rotate the skate blade against the grinding
+        wheel. Rings are placed inside the sharpener, and carve the hollow into
+        the skate blade. Different sizes offer different amounts of grip and
+        glide on the ice and are chosen based on the skater’s age and
+        preference. Each ring is embedded with an RFID tag that stores important
+        data such as the grind profile, which can be viewed on the app.
+      </p>
+
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Process
+      </p>
+
+      <p className="text-lg mt-8 mb-2">
+        The development of RFID25 began with a comprehensive analysis of user
+        requirements and system specifications provided by Sparx Hockey. Key
+        features identified included RFID tag reading and programming, real-time
+        status updates, error handling, and an intuitive user interface.
+      </p>
+
+      <p className="text-lg mb-8 mt-6">
+        The UI was designed using WPF XAML, focusing on clarity and ease of use.
+        Design elements were chosen to match Sparx branding, ensuring a cohesive
+        style between the website, app, and internal systems. Readability and
+        clarity were prioritized to facilitate quick understanding and operation
+        by users of varying technical backgrounds, ensuring that minimal errors
+        were made during production.
+      </p>
+
+      <p className="text-lg mb-8 mt-6">
+        The application was built using Microsoft WPF, leveraging the MVVM
+        architecture to ensure a clean separation of concerns between the UI and
+        business logic. Event-driven programming techniques were employed to
+        handle user interactions and system events efficiently. Asynchronous
+        functions were implemented to manage RFID communication without blocking
+        the UI thread, ensuring a smooth user experience.
+      </p>
     </div>
   );
 }

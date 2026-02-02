@@ -58,7 +58,11 @@ export default function SmartKeyboard() {
         <p className="text-right"> September - December 2025</p>
       </div>
       <div className="space-y-4">
-        <div className="my-6 aspect-video">
+        <p className="mt-4 text-lg font-semibold border-b border-black">
+          Overview
+        </p>
+
+        <div className="my-6 aspect-video rounded-lg overflow-hidden">
           <iframe
             width="100%"
             height="100%"
@@ -86,29 +90,136 @@ export default function SmartKeyboard() {
           </p>
         </p>
 
-        <FadeInOnScroll>
-          <Image
-            src="/smart_keyboard.JPEG"
-            alt="Smart Keyboard"
-            width={800}
-            height={600}
-            className="mt-6 w-full h-auto"
-          />
-        </FadeInOnScroll>
-        <p className="italic">
-          Image Description: Northeastern Enabling Engineering team presenting
-          final project to client.
+        <p className="mt-4 text-lg font-semibold border-b border-black">
+          Background
+        </p>
+
+        <div className="flex justify-center gap-4">
+          <FadeInOnScroll className="flex-1">
+            <Image
+              src="/smart-keyboard/smart_keyboard.JPEG"
+              alt="Smart Keyboard"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+            />
+          </FadeInOnScroll>
+
+          <FadeInOnScroll className="flex-1">
+            <Image
+              src="/smart-keyboard/keyboard-1.webp"
+              alt="Smart Keyboard Software Interface"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+            />
+          </FadeInOnScroll>
+        </div>
+
+        <p className="text-lg mb-8 mt-8">
+          <p className="text-lg mb-8 mt-8">
+            Northeastern University's Fall 2025 Enabling Engineering course
+            partnered with various community organizations to develop assistive
+            technologies for individuals with disabilities. Our team
+            collaborated with a local elementary school to design a solution for
+            a 2nd-grade student, Veer, with mobility challenges who communicates
+            nonverbally.
+          </p>
         </p>
 
         <p className="text-lg mb-8 mt-8">
           <p className="text-lg mb-8 mt-8">
+            Veer's teacher served as our liason and provided consistent feedback
+            throughout the design process. Because of his bright abilities, love
+            of technology, and difficulty physically writing, she wanted to help
+            him focus on typing instead. However, two challenges limited his
+            typing progress: difficulty visually scanning the keyboard for
+            specific keys, and a tendency to engage with the keyboard in non
+            task focused ways/get distracted and hit other keys. Keren sought a
+            structured, visually guided typing system that highlights target
+            keys, gives rewards after correct words typed, and could potentially
+            scale from single words to sentences. It also needs to ensure that
+            he can only interact with the correct keys. Our project aimed to
+            design both the hardware (keyboard with individually adressable
+            LEDs) and software (custom typing program) needed to create this
+            solution for our client.
+          </p>
+        </p>
+
+        <p className="mt-4 text-lg font-semibold border-b border-black">
+          Process
+        </p>
+
+        <FadeInOnScroll className="">
+          <Image
+            src="/smart-keyboard/keyboard-2.webp"
+            alt="Smart Keyboard Software Interface"
+            width={800}
+            height={600}
+            className="w-full h-auto"
+          />
+        </FadeInOnScroll>
+
+        <div className="flex justify-center gap-4">
+          <FadeInOnScroll className="flex-1 aspect-[4/3] overflow-hidden">
+            <Image
+              src="/smart-keyboard/keyboard-4-2.png"
+              alt="Smart Keyboard"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </FadeInOnScroll>
+
+          <FadeInOnScroll className="flex-1 aspect-[4/3] overflow-hidden">
+            <Image
+              src="/smart-keyboard/keyboard-5.png"
+              alt="Smart Keyboard Software Interface"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          </FadeInOnScroll>
+        </div>
+
+        <p className="text-lg mb-8 mt-8">
+          <p className="text-lg mb-8 mt-8">
             UX design was done using Figma, and went through several iterations
-            of client feedback. The back-end was built in Python to interface
-            with SteelSeries GG, a public SDK for controlling keyboard lighting.
-            The front-end development was done using React to create a
-            user-friendly interface for teachers to customize lessons and track
-            student progress. A data tracking tool was also implemented based on
-            client feedback to monitor student performance over time.
+            of client feedback. Everything including font size, style, color,
+            and interaction methods was designed to make this system effective
+            and highly engaging for Veer. The back-end was built in Python to
+            interface with SteelSeries GG, a public SDK for controlling keyboard
+            lighting. Using any given word or sentence, we were able to light
+            the relevant key or region of keys that Veer needed to type. The
+            frontend listened for keypress events and would only react and move
+            forward if the correct key was pressed. The front-end was developed
+            using React to create a user-friendly interface for teachers to
+            customize lessons and track student progress. A data tracking tool
+            was also implemented based on client feedback to monitor student
+            performance over time, and could display metrics such as average
+            time per letter.
+          </p>
+        </p>
+
+        <FadeInOnScroll className="">
+          <Image
+            src="/smart-keyboard/keyboard-6.webp"
+            alt="Smart Keyboard Software Interface"
+            width={800}
+            height={600}
+            className="w-full h-auto"
+          />
+        </FadeInOnScroll>
+
+        <p className="text-lg mb-8 mt-8">
+          <p className="text-lg mb-8 mt-8">
+            Veer interacted with the system during our midway testing session,
+            which helped us refine the design based on his engagement and
+            feedback from his teacher. The final prototype successfully met the
+            client's needs by providing a visually guided typing experience that
+            kept Veer focused and motivated. Our final product drop-off proved
+            the solution to be very effective, allowing Veer to quickly identify
+            letters and type words with minimal error or distraction.
           </p>
         </p>
 

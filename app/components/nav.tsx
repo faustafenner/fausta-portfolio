@@ -24,7 +24,7 @@ export function Navbar() {
   return (
     <nav className="relative mb-16 text-2xl py-8 -mx-8 -mt-8 px-8 pt-8">
       <Image
-        src="/home-background-image.jpg"
+        src="/home-background-photo.jpg"
         alt="Background"
         fill
         className="-z-10 opacity-30 object-cover"

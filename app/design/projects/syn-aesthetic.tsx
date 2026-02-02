@@ -1,3 +1,5 @@
+import { FadeInOnScroll } from "../../components/fade-in-on-scroll";
+
 function ArrowIcon() {
   return (
     <svg
@@ -39,7 +41,7 @@ export default function SynAesthetic() {
       </div>
 
       <p className="mt-4 ">
-        <strong>Role:</strong> Programming, Design
+        <strong>Role:</strong> Programming , Design
       </p>
       <p>
         <strong>Tools:</strong> Processing
@@ -50,17 +52,16 @@ export default function SynAesthetic() {
       </p>
 
       <div className="my-2">
-        <video
-          controls
-          className="w-full"
-          poster="/syn-aesthetic/thumbnail.png"
-        >
-          <source
-            src="/syn-aesthetic/synaesthetic-video.mov"
-            type="video/mp4"
+        <div className="relative w-full overflow-hidden rounded-lg pb-[56.25%]">
+          <iframe
+            className="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/O4f8myMWC-4"
+            title="Syn-aesthetic video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           />
-          Your browser does not support the video tag.
-        </video>
+        </div>
       </div>
 
       <p className="text-lg mb-4 mt-6">
@@ -89,11 +90,13 @@ export default function SynAesthetic() {
         Background
       </p>
 
-      <img
-        src="/syn-aesthetic/facade.png"
-        alt="Syn-aesthetic facade at Ars Electronica"
-        className="my-4"
-      />
+      <FadeInOnScroll>
+        <img
+          src="/syn-aesthetic/facade.png"
+          alt="Syn-aesthetic facade at Ars Electronica"
+          className="my-4"
+        />
+      </FadeInOnScroll>
 
       <p className="text-lg mb-4 mt-6">
         Ars Electronica in Linz, Austria focuses on new technologies and how
@@ -109,11 +112,13 @@ export default function SynAesthetic() {
         Process
       </p>
 
-      <img
-        src="/syn-aesthetic/development.jpg"
-        alt="Syn-aesthetic sketches"
-        className="my-4"
-      />
+      <FadeInOnScroll>
+        <img
+          src="/syn-aesthetic/development.jpg"
+          alt="Syn-aesthetic sketches"
+          className="my-4"
+        />
+      </FadeInOnScroll>
 
       <p className="text-lg mb-4 mt-6">
         Development began with an ideation workshop led by Ars Electronica. We
@@ -122,10 +127,18 @@ export default function SynAesthetic() {
       </p>
 
       <p className="text-lg mb-4 mt-6">
-        Syn-aethetic particularly focuses on sound and vision, drawing
-        inspiration from synesthesia. A custom score was produced, which
+        Syn-aesthetic particularly focuses on sound and vision, drawing
+        inspiration from synesthesia. We produced a custom music score, which
         inspired the visuals that would accompany on the facade.
       </p>
+
+      <FadeInOnScroll>
+        <img
+          src="/syn-aesthetic/development2.png"
+          alt="Development photo 2"
+          className="my-4"
+        />
+      </FadeInOnScroll>
 
       <p className="text-lg mb-4 mt-6">
         The programming was done in Processing, using a custom library provided
