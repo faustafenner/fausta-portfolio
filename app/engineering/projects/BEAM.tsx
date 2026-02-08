@@ -1,3 +1,6 @@
+import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
+import Image from "next/image";
+
 function ArrowIcon() {
   return (
     <svg
@@ -22,8 +25,19 @@ export default function BEAM() {
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-3xl animate-[jump_0.5s_ease-out] inline-block">
-            BEAM
+            BEAM Production Data Tool
           </h2>
+          <p>
+            <a
+              href="https://sparxhockey.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center"
+            >
+              Affiliation: Sparx Hockey
+              <ArrowIcon />
+            </a>
+          </p>
           <p className="mt-4">
             <strong>Skills:</strong> Full Stack Development
           </p>
@@ -34,6 +48,26 @@ export default function BEAM() {
         <p className="text-right">January - March 2025</p>
       </div>
 
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Overview
+      </p>
+
+      <p className="mt-2">
+        *Note that confidential information has been redacted.
+      </p>
+
+      <p className="mt-2 text-lg">
+        The BEAM Production Data Tool is a custom-built application designed to
+        streamline and enhance the data management processes for Sparx Hockey's
+        BEAM device production. This tool provides a centralized platform for
+        analyzing and visualizing production data, enabling the team to monitor
+        production processes, and make informed decisions to optimize
+        manufacturing efficiency and catch and prevent errors. With features
+        such as customizable dashboards and robust reporting capabilities, the
+        BEAM Production Data Tool is an asset in driving continuous improvement
+        in Sparx Hockey's production operations.
+      </p>
+
       <div className="mt-8">
         <iframe
           src="/Beam-Dashboard.pdf"
@@ -41,6 +75,65 @@ export default function BEAM() {
           title="BEAM Production Data Tool"
         />
       </div>
+
+      <p className="mt-4 text-lg mb-4">
+        The user can set filters based on the parameters of interest, and the
+        dashboard will update to show relevant data. They can view individual
+        data points, sorted by date, or run reports based on a given time frame.
+      </p>
+
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Background
+      </p>
+
+      <FadeInOnScroll className="mt-4">
+        <Image
+          src="/RFID24/sparx-bg.webp"
+          alt="Sparx Hockey Background"
+          width={800}
+          height={600}
+          className="w-full h-auto"
+        />
+      </FadeInOnScroll>
+
+      <p className="text-lg mt-8 mb-2">
+        Sparx Hockey is a leading manufacturer of high-performance at home skate
+        sharpening equipment, renowned for its innovative designs and commitment
+        to quality. Their patended design creates a perfect sharpening every
+        time with virtually no adjustments necessary, making it a favorite for
+        at home users and more than 25 NHL teams.
+      </p>
+
+      <div className="mt-8 flex flex-col md:flex-row gap-8 md:gap-8 items-stretch">
+        <FadeInOnScroll className="md:w-2/3 h-full">
+          <Image
+            src="/sparx-beam.png"
+            alt="Sparx Hockey Background"
+            width={800}
+            height={600}
+            className="w-full h-auto rounded-lg"
+          />
+        </FadeInOnScroll>
+
+        <p className="text-lg mt-0 mb-2 md:w-1/3 flex items-center">
+          The Sparx BEAM™ is Sparx Hockey's patented Blade Edge Accuracy
+          Measurement device. Utilizing state-of-the art laser technology, the
+          Sparx BEAM measures blade edges to 1/10,000th of an inch. A quick-look
+          gauge ensures blades are even, and paired with the Sparx Hockey App,
+          exact measurement data is shown.
+        </p>
+      </div>
+      <p>
+        <a
+          href="https://sparxhockey.com/products/sparx-beam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center mt-8"
+        >
+          <strong>Sparx Beam</strong>
+          <ArrowIcon />
+        </a>
+      </p>
     </div>
   );
 }

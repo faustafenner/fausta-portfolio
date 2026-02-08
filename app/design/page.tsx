@@ -63,7 +63,7 @@ export default function Page() {
                   onClick={() => setSelectedProject(index)}
                   className={`text-left w-full py-2 px-4 hover:text-gray-700 transition-colors ${
                     selectedProject === index
-                      ? "font-bold border-l-2 border-[#66806d] bg-[#dfede3]"
+                      ? "font-bold bg-[#dec2a0] rounded"
                       : ""
                   }`}
                 >

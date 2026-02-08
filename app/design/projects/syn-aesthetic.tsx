@@ -94,7 +94,7 @@ export default function SynAesthetic() {
         <img
           src="/syn-aesthetic/facade.png"
           alt="Syn-aesthetic facade at Ars Electronica"
-          className="my-4"
+          className="my-4 rounded-lg"
         />
       </FadeInOnScroll>
 
@@ -116,7 +116,7 @@ export default function SynAesthetic() {
         <img
           src="/syn-aesthetic/development.jpg"
           alt="Syn-aesthetic sketches"
-          className="my-4"
+          className="my-4 rounded-lg"
         />
       </FadeInOnScroll>
 
@@ -136,7 +136,7 @@ export default function SynAesthetic() {
         <img
           src="/syn-aesthetic/development2.png"
           alt="Development photo 2"
-          className="my-4"
+          className="my-4 rounded-lg"
         />
       </FadeInOnScroll>
 

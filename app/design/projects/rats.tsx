@@ -1,3 +1,4 @@
+import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
 import Image from "next/image";
 function ArrowIcon() {
   return (
@@ -35,81 +36,161 @@ export default function Rats() {
         <strong>Methods:</strong> Screen Printing, Digital Illustration
       </p>
 
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Overview
+      </p>
+
       <div className="space-y-4 mt-8">
         {/* First row: Video and rats_1 */}
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px]">
+          <div className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px] rounded-lg overflow-hidden">
             <video controls muted className="w-full h-full object-cover">
-              <source src="/rats.MOV" type="video/mp4" />
+              <source src="/rats/rats-vid.MOV" />
               Your browser does not support the video tag.
             </video>
           </div>
 
-          <div className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px] relative">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px] relative rounded-lg overflow-hidden">
             <Image
-              src="/rats_1.jpg"
+              src="/rats/rats_1.jpg"
               alt="RATS! Project Image 1"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInOnScroll>
         </div>
 
         {/* Second row: rats_2, rats_3, rats_4 */}
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative rounded-lg overflow-hidden">
             <Image
-              src="/rats_2.jpg"
+              src="/rats/rats_2.jpg"
               alt="RATS! Project Image 2"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInOnScroll>
 
-          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative rounded-lg overflow-hidden">
             <Image
-              src="/rats_3.jpg"
+              src="/rats/rats_3.jpg"
               alt="RATS! Project Image 3"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInOnScroll>
 
-          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative rounded-lg overflow-hidden">
             <Image
-              src="/rats_4.jpeg"
+              src="/rats/rats_4.jpeg"
               alt="RATS! Project Image 4"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInOnScroll>
         </div>
-        <p className="mt-8 mb-8">
-          Designed and Screen Printed at FabricFabrik studio in Vienna, Austria.
-          Sited with one of its inspirations: street art along the Danube canal.
-          Motif designed as an ode to motifs present in Vienna museums.{" "}
+
+        {/* Third row: Video and rats_1 */}
+        <div className="flex flex-col md:flex-row gap-4">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px] relative rounded-lg overflow-hidden">
+            <Image
+              src="/rats/rats_5.jpeg"
+              alt="RATS! Project Image 1"
+              fill
+              className="object-cover"
+            />
+          </FadeInOnScroll>
+
+          <FadeInOnScroll className="flex-1 h-60 sm:h-64 md:h-96 lg:h-[700px] relative rounded-lg overflow-hidden">
+            <Image
+              src="/rats/rats-bandana.jpeg"
+              alt="RATS! Project Image 1"
+              fill
+              className="object-cover"
+            />
+          </FadeInOnScroll>
+        </div>
+
+        <p>
+          "RATS!" is a series of motifs deisgned and screen printed as part of a
+          workshop at FabricFabrik studio in Vienna. The design draws
+          inspiration from street art found along the Danube canal and motifs
+          present in Vienna museums, blending these influences into a cohesive
+          visual language.
         </p>
 
+        <p className="mt-4 text-lg font-semibold border-b border-black">
+          Background
+        </p>
+
+        <FadeInOnScroll>
+          <Image
+            src="/rats/fabricfabrik.webp"
+            alt="RATS! in Fabricfabrik Studio"
+            width={1600}
+            height={1200}
+            className="w-full h-auto my-4 rounded-lg"
+          />
+        </FadeInOnScroll>
+
+        <p>
+          FabricFabrik is a screen printing manufactory in Vienna, nestled in a
+          former genuine Viennese inn, whose charm is still clearly evident.
+          From initial design to finished fabric by the meter – in addition to
+          their own textile designs, hand screen prints, and patterns, they also
+          offer completely customized solutions and are open to new, innovative
+          ideas. Sustainability and the appreciation of regional craft
+          businesses are very important. Contemporary art and design, combined
+          with traditional craftsmanship, serve as a starting point for
+          innovative ideas that create synergies.
+        </p>
+
+        <p>
+          Northeastern University students had the opportunity to collaborate
+          with FabricFabrik in a three week screen printing workshop. During
+          this time, we learned the entire screen printing process from start to
+          finish, including designing motifs, translating them into digital
+          files, preparing screens, and printing on fabric. We sourced textiles
+          from local suppliers and second hand stores.
+        </p>
+
+        <p className="mt-4 text-lg font-semibold border-b border-black">
+          Process
+        </p>
         {/* Process images */}
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative rounded-lg overflow-hidden">
             <Image
-              src="/rats-process-1.jpeg"
+              src="/rats/rats-process-1.jpeg"
               alt="RATS! Process Image 1"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInOnScroll>
 
-          <div className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative">
+          <FadeInOnScroll className="flex-1 h-60 sm:h-48 md:h-80 lg:h-[500px] relative rounded-lg overflow-hidden">
             <Image
-              src="/rats-process-4.jpeg"
+              src="/rats/rats-process-4.jpeg"
               alt="RATS! Process Image 4"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInOnScroll>
         </div>
+
+        <p>
+          The design process began with researching street art in Vienna,
+          particularly along the Danube canal, as well as motifs found in Vienna
+          museums. Sketches were created based on these inspirations, focusing
+          on bold, graphic elements that would translate well to screen
+          printing. After finalizing the designs, we prepared the screens by
+          coating them with emulsion and exposing them to UV light with our
+          designs printed on transparencies. Once the screens were ready, we
+          proceeded to print the designs onto fabric using textile inks.
+          Multiple layers and colors were used to add depth and interest to the
+          prints. The final products included a variety of printed fabrics and
+          garments, showcasing the unique motifs created during the workshop.
+        </p>
       </div>
 
       {/* <p className="text-lg mb-4 mt-8">coming soon!</p> */}

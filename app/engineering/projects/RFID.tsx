@@ -72,7 +72,9 @@ export default function RFID() {
         Overview
       </p>
 
-      <p className="mt-2">*Note that sensitive information has been omitted.</p>
+      <p className="mt-2">
+        *Note that confidential information has been redacted.
+      </p>
 
       <div className="relative mt-4">
         <div className="w-full rounded-xl overflow-hidden relative">

@@ -101,7 +101,7 @@ export default function SmartKeyboard() {
               alt="Smart Keyboard"
               width={800}
               height={600}
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg"
             />
           </FadeInOnScroll>
 
@@ -111,7 +111,7 @@ export default function SmartKeyboard() {
               alt="Smart Keyboard Software Interface"
               width={800}
               height={600}
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg"
             />
           </FadeInOnScroll>
         </div>
@@ -156,12 +156,12 @@ export default function SmartKeyboard() {
             alt="Smart Keyboard Software Interface"
             width={800}
             height={600}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-lg"
           />
         </FadeInOnScroll>
 
         <div className="flex justify-center gap-4">
-          <FadeInOnScroll className="flex-1 aspect-[4/3] overflow-hidden">
+          <FadeInOnScroll className="flex-1 aspect-[4/3] overflow-hidden rounded-lg">
             <Image
               src="/smart-keyboard/keyboard-4-2.png"
               alt="Smart Keyboard"
@@ -171,7 +171,7 @@ export default function SmartKeyboard() {
             />
           </FadeInOnScroll>
 
-          <FadeInOnScroll className="flex-1 aspect-[4/3] overflow-hidden">
+          <FadeInOnScroll className="flex-1 aspect-[4/3] overflow-hidden rounded-lg">
             <Image
               src="/smart-keyboard/keyboard-5.png"
               alt="Smart Keyboard Software Interface"
@@ -207,7 +207,7 @@ export default function SmartKeyboard() {
             alt="Smart Keyboard Software Interface"
             width={800}
             height={600}
-            className="w-full h-auto"
+            className="w-full h-auto rounded-lg"
           />
         </FadeInOnScroll>
 

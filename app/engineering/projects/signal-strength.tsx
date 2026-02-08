@@ -1,3 +1,6 @@
+import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
+import Image from "next/image";
+
 function ArrowIcon() {
   return (
     <svg
@@ -22,7 +25,7 @@ export default function SignalStrength() {
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-3xl animate-[jump_0.5s_ease-out] inline-block">
-            Signal Strength
+            Signal Strength Research
           </h2>
           <p className="mt-4">
             <strong>Skills:</strong> Signal Testing, RF Communication
@@ -34,6 +37,20 @@ export default function SignalStrength() {
         <p className="text-right">February 2025</p>
       </div>
 
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Overview
+      </p>
+
+      <p className="mt-4 text-lg">
+        This research focused on evaluating the signal strength of RFID tags
+        used in Sparx Hockey's skate sharpening equipment. The goal was to
+        ensure reliable communication between the RFID tags and the reader
+        devices, which is critical for user experience with the Sparx skate
+        sharpener. Custom testing software was developed in C# to measure signal
+        strength under various heights, and results were analyzed to optimize
+        tag placement and performance.
+      </p>
+
       <div className="mt-8">
         <iframe
           src="/signal-strength-testing.pdf"
@@ -41,6 +58,49 @@ export default function SignalStrength() {
           title="Signal Strength Testing Document"
         />
       </div>
+
+      <p className="mt-4 text-lg font-semibold border-b border-black">
+        Background
+      </p>
+
+      <FadeInOnScroll className="mt-4">
+        <Image
+          src="/RFID24/sparx-bg.webp"
+          alt="Sparx Hockey Background"
+          width={800}
+          height={600}
+          className="w-full h-auto"
+        />
+      </FadeInOnScroll>
+
+      <p className="text-lg mt-8 mb-2">
+        Sparx Hockey is a leading manufacturer of high-performance at home skate
+        sharpening equipment, renowned for its innovative designs and commitment
+        to quality. Their patended design creates a perfect sharpening every
+        time with virtually no adjustments necessary, making it a favorite for
+        at home users and more than 25 NHL teams.
+      </p>
+
+      <FadeInOnScroll>
+        <div className="relative w-full h-96 overflow-hidden rounded-lg mt-4">
+          <Image
+            src="/RFID24/sparx-ring.webp"
+            alt="Sparx Hockey Grinding Ring"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </FadeInOnScroll>
+
+      <p className="text-lg mt-8 mb-2">
+        The Sparx grinding ring is a key component of the skate sharpening
+        system, designed to hold and rotate the skate blade against the grinding
+        wheel. Rings are placed inside the sharpener, and carve the hollow into
+        the skate blade. Different sizes offer different amounts of grip and
+        glide on the ice and are chosen based on the skater’s age and
+        preference. Each ring is embedded with an RFID tag that stores important
+        data such as the grind profile, which can be viewed on the app.
+      </p>
     </div>
   );
 }

@@ -72,7 +72,9 @@ export default function RFID() {
         Overview
       </p>
 
-      <p className="mt-2">*Note that sensitive information has been omitted.</p>
+      <p className="mt-2">
+        *Note that confidential information has been redacted.
+      </p>
 
       <div className="relative mt-4">
         <div className="w-full rounded-xl overflow-hidden relative">
@@ -130,8 +132,8 @@ export default function RFID() {
         RFID25 is a custom full-stack application created for Sparx Hockey,
         designed and programmed to interact with two 25-grinding ring trays at a
         time. Offers RFID tag interaction (querying and programming) with an
-        interactive and dynamic UI, offering real-time feedback on programming
-        status, error handling, and user guidance.
+        interactive and dynamic UI, real-time feedback on programming status,
+        error handling, and user guidance.
       </p>
 
       <p className="text-lg">

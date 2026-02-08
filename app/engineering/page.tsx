@@ -10,13 +10,16 @@ import SynAesthetic from "./projects/syn-aesthetic";
 import ECG from "./projects/ecg";
 
 const projects = [
-  { id: 1, name: "RFID25", component: RFID },
-  { id: 2, name: "BEAM Production Data Tool", component: BEAM },
-  { id: 3, name: "RFID Signal Strength Testing", component: SignalStrength },
-  { id: 4, name: "Smart Keyboard", component: SmartKeyboard },
-  { id: 6, name: "Groove", component: Groove },
-  { id: 7, name: "Syn-aesthetic", component: SynAesthetic },
-  // { id: 8, name: "ECG Instrumentation Amplifier", component: ECG },
+  { id: 1, name: "SPARX: RFID25", component: RFID },
+  { id: 6, name: "GROOVE", component: Groove },
+  { id: 7, name: "SYN-AESTHETIC", component: SynAesthetic },
+  { id: 2, name: "SPARX: BEAM PRODUCTION DATA TOOL", component: BEAM },
+  {
+    id: 3,
+    name: "SPARX: RFID SIGNAL STRENGTH TESTING",
+    component: SignalStrength,
+  },
+  { id: 4, name: "SMART KEYBOARD", component: SmartKeyboard },
 ];
 
 export default function Page() {
@@ -79,7 +82,7 @@ export default function Page() {
                   onClick={() => setSelectedProject(index)}
                   className={`text-left w-full py-2 px-4 hover:text-gray-700 transition-colors ${
                     selectedProject === index
-                      ? "font-bold border-l-2 border-[#66806d] bg-[#dfede3]"
+                      ? "font-bold bg-[#dec2a0] rounded"
                       : ""
                   }`}
                 >
