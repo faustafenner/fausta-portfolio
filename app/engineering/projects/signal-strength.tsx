@@ -53,7 +53,7 @@ export default function SignalStrength() {
 
       <div className="mt-8">
         <iframe
-          src="/signal-strength-testing.pdf"
+          src="/Signal-Strength-Testing.pdf"
           className="w-full h-[600px] md:h-[800px] border border-gray-300"
           title="Signal Strength Testing Document"
         />

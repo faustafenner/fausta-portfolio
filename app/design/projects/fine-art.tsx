@@ -8,23 +8,27 @@ export default function FineArt() {
   const artworks = [
     { image: "/art1.jpg", title: "Pity Party", medium: "Oil on Canvas" },
     {
-      image: "/art2.jpg",
+      image: "/fine-art/art2.jpg",
       title: "Caroline with an Ermine",
       medium: "Oil on Canvas",
     },
     {
-      image: "/art3.jpg",
+      image: "/fine-art/art3.jpg",
       title: "Skeletal",
       medium: "Colored Pencil on Paper",
     },
     {
-      image: "/art4.jpg",
+      image: "/fine-art/art4.jpg",
       title: "Time For a Change",
       medium: "Acrylic Paint on Cardboard",
     },
-    { image: "/art5.jpg", title: "Manifest Destiny", medium: "Mixed Media" },
-    { image: "/art6.png", title: "Untitled", medium: "Scratchboard" },
-    { image: "/art7.png", title: "Untitled", medium: "Pencil" },
+    {
+      image: "/fine-art/art5.jpg",
+      title: "Manifest Destiny",
+      medium: "Mixed Media",
+    },
+    { image: "/fine-art/art6.png", title: "Untitled", medium: "Scratchboard" },
+    { image: "/fine-art/art7.png", title: "Untitled", medium: "Pencil" },
   ];
 
   const nextImage = () => {
