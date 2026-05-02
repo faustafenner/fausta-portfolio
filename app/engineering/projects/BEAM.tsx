@@ -1,5 +1,10 @@
 import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
 import Image from "next/image";
+import { Playwrite_NO } from "next/font/google";
+
+const playwrite_no = Playwrite_NO({
+  weight: "400",
+});
 
 function ArrowIcon() {
   return (
@@ -22,30 +27,34 @@ function ArrowIcon() {
 export default function BEAM() {
   return (
     <div>
-      <div className="flex justify-between items-start">
-        <div>
-          <h2 className="text-3xl animate-[jump_0.5s_ease-out] inline-block">
-            BEAM Production Data Tool
-          </h2>
-          <p>
-            <a
-              href="https://sparxhockey.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center"
+      <div className="border-dashed border-3 border-white p-4 rounded-xl">
+        <div className="flex justify-between items-start">
+          <div>
+            <h2
+              className={`text-3xl animate-[jump_0.5s_ease-out] inline-block text-orange-500 ${playwrite_no.className}`}
             >
-              Affiliation: Sparx Hockey
-              <ArrowIcon />
-            </a>
-          </p>
-          <p className="mt-4">
-            <strong>Skills:</strong> Full Stack Development
-          </p>
-          <p>
-            <strong>Tools:</strong> Blazor, Blazor Boostrap
-          </p>
+              BEAM Production Data Tool
+            </h2>
+            <p>
+              <a
+                href="https://sparxhockey.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center"
+              >
+                Affiliation: Sparx Hockey
+                <ArrowIcon />
+              </a>
+            </p>
+            <p className="mt-4">
+              <strong>Skills:</strong> Full Stack Development
+            </p>
+            <p>
+              <strong>Tools:</strong> Blazor, Blazor Boostrap
+            </p>
+          </div>
+          <p className="text-right">January - March 2025</p>
         </div>
-        <p className="text-right">January - March 2025</p>
       </div>
 
       <p className="mt-4 text-lg font-semibold border-b border-black">

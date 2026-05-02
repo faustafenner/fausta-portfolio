@@ -33,7 +33,7 @@ export function Navbar() {
       <div className="relative z-10">
         <Link
           href="/"
-          className="hover:text-neutral-600 underline decoration-black underline-offset-2"
+          className="hover:text-[#b9906c] underline decoration-black underline-offset-2"
         >
           FAUSTAFENNER
         </Link>

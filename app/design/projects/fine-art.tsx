@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Playwrite_NO } from "next/font/google";
+
+const playwrite_no = Playwrite_NO({
+  weight: "400",
+});
 
 export default function FineArt() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,10 +46,14 @@ export default function FineArt() {
 
   return (
     <div>
-      <div className="flex justify-between items-start">
-        <h2 className="text-3xl animate-[jump_0.5s_ease-out]">
-          Fine Art Portfolio
-        </h2>
+      <div className="border-dashed border-3 border-white p-4 rounded-xl">
+        <div className="flex justify-between items-start">
+          <h2
+            className={`text-3xl animate-[jump_0.5s_ease-out] text-orange-500 ${playwrite_no.className}`}
+          >
+            Fine Art Portfolio
+          </h2>
+        </div>
       </div>
 
       <div className="mt-8 relative">

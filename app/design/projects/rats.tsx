@@ -1,5 +1,10 @@
 import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
 import Image from "next/image";
+import { Playwrite_NO } from "next/font/google";
+
+const playwrite_no = Playwrite_NO({
+  weight: "400",
+});
 function ArrowIcon() {
   return (
     <svg
@@ -21,20 +26,29 @@ function ArrowIcon() {
 export default function Rats() {
   return (
     <div>
-      <div className="flex justify-between items-start">
-        <h2 className="text-3xl animate-[jump_0.5s_ease-out]">RATS!</h2>
-        <p className="text-right">July 2024</p>
-      </div>
-      <p>
-        <a href="https://fabricfabrik.at/" className="inline-flex items-center">
-          Affiliation: Fabricfabrik
-          <ArrowIcon />
-        </a>
-      </p>
+      <div className="border-dashed border-3 border-white p-4 rounded-xl">
+        <div className="flex justify-between items-start">
+          <h2
+            className={`text-3xl animate-[jump_0.5s_ease-out] text-orange-500 ${playwrite_no.className}`}
+          >
+            RATS!
+          </h2>
+          <p className="text-right">July 2024</p>
+        </div>
+        <p>
+          <a
+            href="https://fabricfabrik.at/"
+            className="inline-flex items-center"
+          >
+            Affiliation: Fabricfabrik
+            <ArrowIcon />
+          </a>
+        </p>
 
-      <p className="mt-4 ">
-        <strong>Methods:</strong> Screen Printing, Digital Illustration
-      </p>
+        <p className="mt-4 ">
+          <strong>Methods:</strong> Screen Printing, Digital Illustration
+        </p>
+      </div>
 
       <p className="mt-4 text-lg font-semibold border-b border-black">
         Overview

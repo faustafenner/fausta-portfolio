@@ -80,9 +80,9 @@ export default function Page() {
               <li key={project.id}>
                 <button
                   onClick={() => setSelectedProject(index)}
-                  className={`text-left w-full py-2 px-4 hover:text-gray-700 transition-colors ${
+                  className={`text-left w-full py-2 px-4 hover:text-[#b9906c] transition-colors ${
                     selectedProject === index
-                      ? "font-bold bg-[#dec2a0] rounded"
+                      ? "font-bold text-orange-500 rounded"
                       : ""
                   }`}
                 >

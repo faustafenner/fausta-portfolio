@@ -1,4 +1,9 @@
 import { FadeInOnScroll } from "../../components/fade-in-on-scroll";
+import { Playwrite_NO } from "next/font/google";
+
+const playwrite_no = Playwrite_NO({
+  weight: "400",
+});
 
 function ArrowIcon() {
   return (
@@ -21,33 +26,37 @@ function ArrowIcon() {
 export default function SynAesthetic() {
   return (
     <div>
-      <div className="flex justify-between items-start">
-        <div>
-          <h2 className="text-3xl animate-[jump_0.5s_ease-out] inline-block">
-            Syn-aesthetic
-          </h2>
-
-          <p>
-            <a
-              href="https://ars.electronica.art/news/en/"
-              className="inline-flex items-center"
+      <div className="border-dashed border-3 border-white p-4 rounded-xl">
+        <div className="flex justify-between items-start">
+          <div>
+            <h2
+              className={`text-3xl animate-[jump_0.5s_ease-out] inline-block text-orange-500 ${playwrite_no.className}`}
             >
-              Affiliation: Ars Electronica Futurelab
-              <ArrowIcon />
-            </a>
-          </p>
+              Syn-aesthetic
+            </h2>
+
+            <p>
+              <a
+                href="https://ars.electronica.art/news/en/"
+                className="inline-flex items-center"
+              >
+                Affiliation: Ars Electronica Futurelab
+                <ArrowIcon />
+              </a>
+            </p>
+          </div>
+          <p className="text-right">July 2024</p>
         </div>
-        <p className="text-right">July 2024</p>
+
+        <p className="mt-4 ">
+          <strong>Role:</strong> Programming , Design
+        </p>
+        <p>
+          <strong>Tools:</strong> Processing
+        </p>
       </div>
 
-      <p className="mt-4 ">
-        <strong>Role:</strong> Programming , Design
-      </p>
-      <p>
-        <strong>Tools:</strong> Processing
-      </p>
-
-      <p className="mt-4 text-lg font-semibold border-b border-black">
+      <p className="mt-4 text-lg font-semibold border-b border-gray-600 text-[#f57637]">
         Overview
       </p>
 
@@ -86,7 +95,7 @@ export default function SynAesthetic() {
         experiences.{" "}
       </p>
 
-      <p className="mt-4 text-lg font-semibold border-b border-black">
+      <p className="mt-4 text-lg font-semibold border-b border-gray-600 text-[#f57637]">
         Background
       </p>
 
@@ -108,7 +117,7 @@ export default function SynAesthetic() {
         deeper concept in the world of human-computer interaction.
       </p>
 
-      <p className="mt-4 text-lg font-semibold border-b border-black">
+      <p className="mt-4 text-lg font-semibold border-b border-gray-600 text-[#f57637]">
         Process
       </p>
 

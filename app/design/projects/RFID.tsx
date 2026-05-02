@@ -3,6 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FadeInOnScroll } from "app/components/fade-in-on-scroll";
+import { Playwrite_NO } from "next/font/google";
+
+const playwrite_no = Playwrite_NO({
+  weight: "400",
+});
 
 function ArrowIcon() {
   return (
@@ -46,26 +51,32 @@ export default function RFID() {
 
   return (
     <div>
-      <div className="flex justify-between items-start">
-        <div>
-          <h2 className="text-3xl animate-[jump_0.5s_ease-out]">RFID25</h2>
-          <p>
-            <a
-              href="https://sparxhockey.com/"
-              className="inline-flex items-center"
+      <div className="border-dashed border-3 border-white p-4 rounded-xl">
+        <div className="flex justify-between items-start">
+          <div>
+            <h2
+              className={`text-3xl animate-[jump_0.5s_ease-out] text-orange-500 ${playwrite_no.className}`}
             >
-              Affiliation: Sparx Hockey
-              <ArrowIcon />
-            </a>
-          </p>
-          <p className="mt-4 ">
-            <strong>Skills:</strong> UX Design, Full Stack Development
-          </p>
-          <p>
-            <strong>Tools:</strong> Microsoft WPF, C#, XAML
-          </p>
+              RFID25
+            </h2>
+            <p>
+              <a
+                href="https://sparxhockey.com/"
+                className="inline-flex items-center"
+              >
+                Affiliation: Sparx Hockey
+                <ArrowIcon />
+              </a>
+            </p>
+            <p className="mt-4 ">
+              <strong>Skills:</strong> UX Design, Full Stack Development
+            </p>
+            <p>
+              <strong>Tools:</strong> Microsoft WPF, C#, XAML
+            </p>
+          </div>
+          <p className="text-right">March - June 2025</p>
         </div>
-        <p className="text-right">March - June 2025</p>
       </div>
 
       <p className="mt-4 text-lg font-semibold border-b border-black">

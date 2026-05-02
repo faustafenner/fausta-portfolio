@@ -21,7 +21,7 @@ function ArrowIcon() {
 export default function SynAesthetic() {
   return (
     <div>
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start bg-black">
         <div>
           <h2 className="text-3xl animate-[jump_0.5s_ease-out] inline-block">
             Syn-aesthetic
